@@ -32,17 +32,26 @@ namespace BookService.Controllers
         }
 
         // GET: api/Books/5
-        [ResponseType(typeof(Book))]
+        [ResponseType(typeof(BookDetailDTO))]
         public async Task<IHttpActionResult> GetBook(int id)
         {
-            Book book = await db.Books.FindAsync(id);
+            var book = await db.Books.Include(b => b.Author).Select(b =>
+                new BookDetailDTO()
+                {
+                    Id = b.Id,
+                    Title = b.Title,
+                    Year = b.Year,
+                    Price = b.Price,
+                    AuthorName = b.Author.Name,
+                    Genre = b.Genre
+                }).SingleOrDefaultAsync(b => b.Id == id);
             if (book == null)
             {
                 return NotFound();
             }
 
             return Ok(book);
-        }
+        } 
 
         // PUT: api/Books/5
         [ResponseType(typeof(void))]

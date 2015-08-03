@@ -30,3 +30,7 @@ c:\users\cheryl\documents\visual studio 2013\Projects\BookService\BookService\bi
 c:\users\cheryl\documents\visual studio 2013\Projects\BookService\BookService\obj\Debug\BookService.csprojResolveAssemblyReference.cache
 c:\users\cheryl\documents\visual studio 2013\Projects\BookService\BookService\obj\Debug\BookService.dll
 c:\users\cheryl\documents\visual studio 2013\Projects\BookService\BookService\obj\Debug\BookService.pdb
+c:\users\cheryl\documents\visual studio 2013\Projects\BookService\BookService\bin\EntityFramework.dll
+c:\users\cheryl\documents\visual studio 2013\Projects\BookService\BookService\bin\EntityFramework.SqlServer.dll
+c:\users\cheryl\documents\visual studio 2013\Projects\BookService\BookService\bin\EntityFramework.xml
+c:\users\cheryl\documents\visual studio 2013\Projects\BookService\BookService\bin\EntityFramework.SqlServer.xml

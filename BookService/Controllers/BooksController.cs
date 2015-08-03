@@ -20,7 +20,9 @@ namespace BookService.Controllers
         // GET: api/Books
         public IQueryable<Book> GetBooks()
         {
-            return db.Books;
+            return db.Books
+                // new code, for eager loading:
+                .Include(b => b.Author);
         }
 
         // GET: api/Books/5

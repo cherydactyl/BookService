@@ -17,7 +17,7 @@ namespace BookService.Models
     
         public BookServiceContext() : base("name=BookServiceContext")
         {
-            // (Lazy loading demo) New code:
+            // (Lazy loading demo: tracing) New code:
             this.Database.Log = s => System.Diagnostics.Debug.WriteLine(s);
 
         }

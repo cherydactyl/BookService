@@ -36,3 +36,4 @@ c:\users\cheryl\documents\visual studio 2013\Projects\BookService\BookService\bi
 c:\users\cheryl\documents\visual studio 2013\Projects\BookService\BookService\bin\EntityFramework.SqlServer.xml
 c:\users\cheryl\documents\visual studio 2013\Projects\BookService\BookService\obj\Debug\BookService.Migrations.Initial.resources
 c:\users\cheryl\documents\visual studio 2013\Projects\BookService\BookService\obj\Debug\BookService.csproj.GenerateResource.Cache
+c:\users\cheryl\documents\visual studio 2013\Projects\BookService\BookService\bin\XmlDocument.xml

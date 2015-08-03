@@ -18,11 +18,17 @@ namespace BookService.Controllers
         private BookServiceContext db = new BookServiceContext();
 
         // GET: api/Books
-        public IQueryable<Book> GetBooks()
+        public IQueryable<BookDTO> GetBooks()
         {
-            return db.Books
-                // new code, for eager loading:
-                .Include(b => b.Author);
+            var books = from b in db.Books
+                        select new BookDTO()
+                        {
+                            Id = b.Id,
+                            Title = b.Title,
+                            AuthorName = b.Author.Name
+                        };
+
+            return books;
         }
 
         // GET: api/Books/5

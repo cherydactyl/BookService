@@ -18,6 +18,10 @@ namespace BookService.Controllers
         private BookServiceContext db = new BookServiceContext();
 
         // GET: api/Books
+        /// <summary>
+        /// Get all books
+        /// </summary>
+        /// <returns></returns>
         public IQueryable<BookDTO> GetBooks()
         {
             var books = from b in db.Books
@@ -32,6 +36,11 @@ namespace BookService.Controllers
         }
 
         // GET: api/Books/5
+        /// <summary>
+        /// Get a book by ID
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         [ResponseType(typeof(BookDetailDTO))]
         public async Task<IHttpActionResult> GetBook(int id)
         {
@@ -54,6 +63,12 @@ namespace BookService.Controllers
         } 
 
         // PUT: api/Books/5
+        /// <summary>
+        /// Create a new book
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="book"></param>
+        /// <returns></returns>
         [ResponseType(typeof(void))]
         public async Task<IHttpActionResult> PutBook(int id, Book book)
         {
@@ -89,6 +104,11 @@ namespace BookService.Controllers
         }
 
         // POST: api/Books
+        /// <summary>
+        /// Update an existing book
+        /// </summary>
+        /// <param name="book"></param>
+        /// <returns></returns>
         [ResponseType(typeof(Book))]
         public async Task<IHttpActionResult> PostBook(Book book)
         {
@@ -115,6 +135,11 @@ namespace BookService.Controllers
         }
 
         // DELETE: api/Books/5
+        /// <summary>
+        /// Delete a book
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         [ResponseType(typeof(Book))]
         public async Task<IHttpActionResult> DeleteBook(int id)
         {

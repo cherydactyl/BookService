@@ -18,12 +18,21 @@ namespace BookService.Controllers
         private BookServiceContext db = new BookServiceContext();
 
         // GET: api/Authors
+        /// <summary>
+        /// Get all authors
+        /// </summary>
+        /// <returns></returns>
         public IQueryable<Author> GetAuthors()
         {
             return db.Authors;
         }
 
         // GET: api/Authors/5
+        /// <summary>
+        /// Get an author by ID
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         [ResponseType(typeof(Author))]
         public async Task<IHttpActionResult> GetAuthor(int id)
         {
@@ -37,6 +46,12 @@ namespace BookService.Controllers
         }
 
         // PUT: api/Authors/5
+        /// <summary>
+        /// Create a new author
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="author"></param>
+        /// <returns></returns>
         [ResponseType(typeof(void))]
         public async Task<IHttpActionResult> PutAuthor(int id, Author author)
         {
@@ -72,6 +87,11 @@ namespace BookService.Controllers
         }
 
         // POST: api/Authors
+        /// <summary>
+        /// Update an existing author
+        /// </summary>
+        /// <param name="author"></param>
+        /// <returns></returns>
         [ResponseType(typeof(Author))]
         public async Task<IHttpActionResult> PostAuthor(Author author)
         {
@@ -87,6 +107,11 @@ namespace BookService.Controllers
         }
 
         // DELETE: api/Authors/5
+        /// <summary>
+        /// Delete an author
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         [ResponseType(typeof(Author))]
         public async Task<IHttpActionResult> DeleteAuthor(int id)
         {
